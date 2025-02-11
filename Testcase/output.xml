@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.2 on win32)" generated="2025-02-11T10:26:56.821734" rpa="false" schemaversion="5">
+<suite id="s1" name="New" source="C:\Users\CLASSROOM\Desktop\New folder\Testcase\New.robot">
+<test id="s1-t1" name="Click on 'Products' button" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:26:57.005019" level="INFO">Opening browser 'chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T10:26:57.004839" elapsed="4.278441"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:27:01.284027" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[2]/a'.</msg>
+<arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:27:01.283716" elapsed="1.499742"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:26:57.004140" elapsed="5.779644"/>
+</test>
+<test id="s1-t2" name="Verify Products Page Navigation" line="19">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:27:02.785560" level="FAIL">Variable '${PRODUCT_LIST_XPATH}' not found. Did you mean:
+    ${PRODUCT_XPATH}</msg>
+<arg>${PRODUCT_LIST_XPATH}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-02-11T10:27:02.785075" elapsed="0.000526">Variable '${PRODUCT_LIST_XPATH}' not found. Did you mean:
+    ${PRODUCT_XPATH}</status>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${PRODUCT_XPATH}</arg>
+<arg>${PRODUCTS_PAGE_TITLE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:27:02.785860" elapsed="0.000029"/>
+</kw>
+<doc>ตรวจสอบว่าไปยังหน้า "All Products" สำเร็จ</doc>
+<status status="FAIL" start="2025-02-11T10:27:02.784450" elapsed="0.001617">Variable '${PRODUCT_LIST_XPATH}' not found. Did you mean:
+    ${PRODUCT_XPATH}</status>
+</test>
+<status status="FAIL" start="2025-02-11T10:26:56.822738" elapsed="5.964250"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="New" id="s1" pass="1" fail="1" skip="0">New</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
